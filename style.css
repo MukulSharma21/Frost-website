@@ -1,0 +1,182 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Trebuchet MS , serif;
+}
+.wrapper{
+     width: 96%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2%;
+}
+body{
+    background: #FBFBFB;
+}
+header .list-item{
+    background: #2E2E2E;
+    padding: 30px 10px;
+}
+header .list-item li{
+    float: right;
+    width: 5%;
+    list-style: none;
+    color: #A7A7A7;
+    margin-left: 30px;
+}
+header .list-item::after{
+    clear: both;
+    content: "";
+    display: block;
+}
+header .list-item h1{
+    text-indent: -10000px;
+    margin: 0;
+    padding: 0;
+    background: url(Images/logo.png) no-repeat;
+    width: 130px;
+    height: 90px;
+    position: absolute;
+    top: 0;
+    left: 15%;
+    box-shadow: 1px 2px 10px #eee;
+}
+.lead-banner{
+    width: 100%;
+}
+.lead-banner img{
+    width: 100%;
+    max-height: 600px;
+}
+#section-one{
+    width: 100%;
+    margin-top:80px;
+}
+#section-one .Navigation  h1{
+    width: 60%;
+    margin: 0 auto 10px;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 100;
+    font-family: HelvLight;
+    text-transform: uppercase;
+}
+#section-one .Navigation  h3{
+    width: 60%;
+    margin: 10px auto;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 100;
+    font-size: 16px;
+}
+#section-one nav h6{
+    text-indent: -10000px;
+    height: 0;
+}
+#section-one nav ul{
+    margin-top: 50px;
+}
+#section-one nav ul li{
+    list-style: none;
+    float: left;
+    width: 25%;
+    padding: 10px 0;
+}
+#section-one nav ul li img{
+   padding: 10px 40%;
+}
+#section-one nav ul li h2{
+    padding: 0 auto;
+    margin: 0 auto 10px;
+    text-align: center;
+    width: 60%;
+    color: #2E2E2E;
+    font-weight: 100;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+#section-one nav ul li p{
+    text-align: center;
+    line-height: 1.6em;
+    color: #919191;
+} 
+.border-bottom{
+    border-top: 2px solid grey;
+    width: 30%;
+    margin: 0px auto 15px;
+}
+#section-one  a{
+    border: 1px solid black;
+    text-decoration: none;
+}
+#section-one a {
+    border: 1px solid black;
+    text-decoration: none;
+    color: #aaaaaa;
+    font-weight: 100;
+    font-size: 20px;
+    width: 100%;
+    margin-left: 45%;
+    margin-top: 20px;
+}
+#section-two{
+    width: 100%;
+    margin-top: 80px;
+}
+.lead-banner-one{
+    width: 100%
+}
+.lead-banner-one img{
+    width: 100%;
+    max-height: 400px
+}
+.introduction h1{
+    width: 60%;
+    margin: 40px auto 10px;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 100;
+    font-family: HelvLight;
+    text-transform: uppercase;
+} 
+.introduction h2{
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+    font-weight: 100;
+    font-size: 18px;
+}
+.introduction ul li{
+    list-style: none;
+    float: left;
+    width: 20%;
+    margin: 50px 0 20px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 18px;
+}
+.introduction ul{
+    width: 60%;
+    margin: 0 auto;
+}
+.introduction ul li span{
+    padding-left: 8px;
+}
+.introduction::after{
+    clear: both;
+    content: "";
+    display: block;
+}
+#grid{
+    margin: 60px auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4,24%);
+    grid-auto-rows: 200px;
+    grid-gap: 10px;
+}
+.one{
+    text-indent: -10000px;
+}
+.same{
+    background: gray;
+}
