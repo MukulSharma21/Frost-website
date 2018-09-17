@@ -117,6 +117,12 @@ header .list-item h1 {
     color: #919191;
 }
 
+#section-one nav ul::after {
+    clear: both;
+    display: block;
+    content: "";
+}
+
 .border-bottom {
     border-top: 2px solid grey;
     width: 30%;
@@ -129,19 +135,33 @@ header .list-item h1 {
 }
 
 #section-one a {
-    border: 1px solid black;
+    border: 1px solid indigo;
     text-decoration: none;
     color: #aaaaaa;
     font-weight: 100;
     font-size: 20px;
     width: 100%;
-    margin-left: 45%;
     margin-top: 20px;
+}
+
+.Flaot {
+    width: 30%;
+    margin: 20px auto;
 }
 
 #section-two {
     width: 100%;
     margin-top: 80px;
+}
+
+.border-of-link {
+    border: 2px solid #549DC5;
+    padding: 5px 15px;
+    background: indigo;
+    width: 100%;
+    text-align: center;
+    outline: none;
+    box-shadow: 1px 2px 0 black;
 }
 
 .lead-banner-one {
@@ -543,5 +563,66 @@ textarea {
     width: 80%;
     margin: 20px 0px;
     padding: 2px 10px;
- 
+
+}
+
+/*
+==========================================
+Media Queries for tablets
+==========================================*/
+
+@media screen and (max-width: 768px) {
+    header .list-item li {
+        width: 10%;
+        text-align: center;
+        position: relative;
+    }
+
+    header .list-item h1 {
+        background: none !important;
+        padding: 0;
+        margin: 0;
+        background-color: #484848;
+        box-shadow: none;
+    }
+
+    #section-one .work li {
+        width: 46%;
+        margin: 20px 2% 35px;
+    }
+
+    #section-one .work li:nth-child(odd) {
+        clear: both;
+    }
+
+    #section-two .introduction ul {
+        width: 100%;
+    }
+
+    #section-two .introduction #grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #section-three .working-place p {
+        text-transform: capitalize;
+        line-height: 1.7rem;
+    }
+
+    #section-three .working-place p:nth-child(2) {
+        text-transform: capitalize;
+        line-height: 1.7rem;
+    }
+
+    #section-three .our-work li {
+        width: 46%;
+        margin: 30px 2%;
+        text-align: center;
+    }
+
+    #section-three .our-work li:nth-child(3) {
+        clear: both;
+        margin: 0 auto;
+        padding: 0 25%;
+        text-align: center;
+    }
 }
