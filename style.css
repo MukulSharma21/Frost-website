@@ -18,14 +18,27 @@ body {
 header .list-item {
     background: #2E2E2E;
     padding: 30px 10px;
+    position: relative;
+}
+
+header .list-item ul {
+    float: right;
+    width: 65%;
+}
+
+header .list-item ul::after {
+    display: block;
+    content: "";
+    clear: both;
 }
 
 header .list-item li {
-    float: right;
-    width: 5%;
+    float: left;
+    width: 12%;
+    padding-left: 5px;
     list-style: none;
+    text-transform: capitalize;
     color: #A7A7A7;
-    margin-left: 30px;
 }
 
 header .list-item::after {
@@ -524,6 +537,14 @@ label:focus {
     background: #549DC5;
     width: 180px;
     margin: 30px auto 60px;
+    box-shadow: 3px 5px 2px rgb(5, 84, 128),
+        4px 6px 2px rgba(5, 84, 128, 0.7),
+        5px 7px 2px rgba(5, 84, 128, 0.5),
+        6px 8px 2px rgba(5, 84, 128, 0.4);
+    -webkit- box-shadow: 3px 5px 2px rgb(5, 84, 128),
+        4px 6px 2px rgba(5, 84, 128, 0.7),
+        5px 7px 2px rgba(5, 84, 128, 0.5),
+        6px 8px 2px rgba(5, 84, 128, 0.4);
 }
 
 .submit-button a h1 {
@@ -563,19 +584,71 @@ textarea {
     width: 80%;
     margin: 20px 0px;
     padding: 2px 10px;
-
 }
 
-/*
-==========================================
+.hidden,
+header input[type="checkbox"] {
+    height: 0;
+    line-height: 0;
+    display: none;
+}
+
+/*==========================================
 Media Queries for tablets
 ==========================================*/
 
 @media screen and (max-width: 768px) {
+
+    .hidden,
+    header input[type="checkbox"] {
+        height: 30px;
+        display: block;
+    }
+
+    header .wrapper {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    header input:checked ~ ul {
+        height: 100%;
+        margin-top: 30px;
+    }
+
+    .hidden {
+        padding: 10px;
+        position: absolute;
+        top: 10px;
+        background: url(Images/burger.png) no-repeat center;
+        text-indent: -10000px;
+        left: 0;
+        width: 45px;
+        cursor: pointer;
+    }
+
+    header .list-item ul {
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+    }
+
     header .list-item li {
-        width: 10%;
+        width: 100% !important;
         text-align: center;
-        position: relative;
+        font-size: 1.0rem;
+        float: none;
+        padding: 5px;
+        margin: 0;
+        border-bottom: 1px solid gray;
+        box-sizing: border-box;
+    }
+
+    header input[type="checkbox"] {
+        display: none;
+        margin: 0;
+        padding: 0;
+        height: 20px;
     }
 
     header .list-item h1 {
@@ -589,6 +662,7 @@ Media Queries for tablets
     #section-one .work li {
         width: 46%;
         margin: 20px 2% 35px;
+        font-size: 1.0rem;
     }
 
     #section-one .work li:nth-child(odd) {
@@ -605,24 +679,179 @@ Media Queries for tablets
 
     #section-three .working-place p {
         text-transform: capitalize;
-        line-height: 1.7rem;
+        line-height: 1.4rem;
+        font-size: 1.0rem;
     }
 
     #section-three .working-place p:nth-child(2) {
         text-transform: capitalize;
-        line-height: 1.7rem;
+        line-height: 1.0rem;
     }
 
     #section-three .our-work li {
         width: 46%;
         margin: 30px 2%;
-        text-align: center;
+        text-align: left;
+        font-size: 1.02rem;
     }
 
     #section-three .our-work li:nth-child(3) {
         clear: both;
         margin: 0 auto;
-        padding: 0 25%;
+        padding: 0 2%;
         text-align: center;
+        width: 96%;
+    }
+}
+
+/*==============================================================
+MEDIA QUERY FOR MOBILE
+================================================================*/
+
+
+@media screen and (max-width : 560px) {
+
+    #section-one {
+        margin-top: 15px;
+    }
+
+    #section-one .Navigation h1,
+    #section-two .introduction h1,
+    #section-three .heading h1,
+    #section-four .meetup h1,
+    footer .heading h1 {
+        width: 100%;
+        padding: 0;
+        margin: 5px 0;
+        font-size: 1.4rem;
+        font-weight: bold;
+    }
+
+    #section-one .Navigation h3,
+    #section-two .introduction h2,
+    #section-three .heading h2,
+    footer .heading h2 {
+        width: 100%;
+        padding: 0;
+        font-size: 0.8rem;
+        font-weight: bold;
+    }
+
+    #section-one .work {
+        margin-top: 10px;
+        padding: 0;
+        width: 100%;
+    }
+
+    #section-one .work ul li {
+        float: none;
+        width: 96%;
+        padding: 10px 2%;
+    }
+
+    #section-one .work ul li img {
+        text-align: center !important;
+        width: 2rem;
+    }
+
+    #section-one .Flaot {
+        width: 90%;
+    }
+
+    .border-of-link {
+        width: 80%;
+    }
+
+
+    .introduction ul {
+        display: none;
+        height: 0;
+    }
+
+    #grid {
+        display: block;
+        grid-template-columns: repeat (1, 100%) !important;
+        grid-template-rows: 60px;
+    }
+
+    .one,
+    .three,
+    .four,
+    .five {
+        height: 200px;
+        margin-bottom: 5px;
+    }
+
+    .side-img {
+        float: none;
+        clear: both;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .working-place {
+        width: 100%;
+        float: none;
+        clear: both;
+    }
+
+    .working-place h3 {
+        text-align: center !important;
+        width: 100%;
+    }
+
+    .working-place p {
+        width: 100% !important;
+        font-size: 1rem;
+        padding: 10px 2px;
+        box-sizing: border-box;
+    }
+
+    p.two {
+        font-size: 1rem;
+    }
+
+    .our-work {
+        padding-bottom: 0;
+    }
+
+    .our-work ul li,
+    #section-four ul li {
+        float: none;
+        width: 94% !important;
+        padding: 10px 3%;
+    }
+
+    .our-work ul li p {
+        text-align: left;
+    }
+
+    #section-four {
+        margin: 30px 0;
+    }
+
+    #section-four ul li h2,
+    #section-four ul li h4 {
+        margin: 10px 0 !important;
+    }
+
+    footer ul li {
+        width: 96% !important;
+        padding: 10px 2%;
+        float: none;
+        font-size: 0.9rem;
+        text-align: left !important;
+    }
+
+    .address,
+    .email,
+    .contact {
+        background: none;
+    }
+
+    .copyright {
+        padding: 10px;
+        font-size: 0.8rem;
     }
 }
